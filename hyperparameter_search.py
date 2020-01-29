@@ -6,9 +6,22 @@ import pickle
 import csv
 
 ### this script performs grid search over the hyperparameters defined in hyperparameter_control.py
+gpus = tf.config.experimental.list_physical_devices('GPU')
+if gpus:
+    try:
+    # Currently, memory growth needs to be the same across GPUs
+        for gpu in gpus:
+            tf.config.experimental.set_memory_growth(gpu, True)
+        logical_gpus = tf.config.experimental.list_logical_devices('GPU')
+        print(len(gpus), "Physical GPUs,", len(logical_gpus), "Logical GPUs")
+    except RuntimeError as e:
+    # Memory growth must be set before GPUs have been initialized
+        print(e)
+# print(tf.__version__)
 
 
 def run_search (agent_configuration, hyperparameters):
+    
     number_of_workers = 2
     params_queue = Manager().Queue(number_of_workers)
     episode_queue = Manager().Queue()
