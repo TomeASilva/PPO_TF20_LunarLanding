@@ -9,7 +9,7 @@ import csv
 
 
 def run_search (agent_configuration, hyperparameters):
-    number_of_workers = 4
+    number_of_workers = 2
     params_queue = Manager().Queue(number_of_workers)
     episode_queue = Manager().Queue()
     current_iter = Manager().Value("i", 0)

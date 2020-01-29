@@ -539,6 +539,7 @@ class GlobalAgent(Agent):
                 writer.writerow([f"Average: {av_reward} -- Max: {max_reward} -- Min {min_reward}"])
             
             self.average_reward_queue.put(sum(self.rewards) / len(self.rewards), block=True, timeout=30)
+            print(f"Exited Global Agent")
         except KeyboardInterrupt:
             #---After all steps are run average out the last 100 rewards and put it on a queue
             print("Wait until summary of partial run is updated to Running_log.csv")
@@ -711,6 +712,7 @@ class WorkerAgent(Agent):
             #---END Collect n episodes from this worker     
            
             self.number_passes += 1
+        print(f"Exited {self.name}")
 
 
     def update_variables(self):
