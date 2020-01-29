@@ -496,11 +496,12 @@ class GlobalAgent(Agent):
                     max_reward = max(rewards_volatile)
                     min_reward = min(rewards_volatile)
                     average_steps = sum(steps_ep) / len(steps_ep)
-                    with self.writer.as_default():
-                        tf.summary.scalar(f"Averge_Reward", av_reward, self.iter)
-                        tf.summary.scalar(f"Max_Reward", max_reward, self.iter)
-                        tf.summary.scalar(f"Min_Reward", min_reward, self.iter)
-                        tf.summary.scalar(f"Average_Length", average_steps, self.iter)
+                    if self.record_statistics:
+                        with self.writer.as_default():
+                            tf.summary.scalar(f"Averge_Reward", av_reward, self.iter)
+                            tf.summary.scalar(f"Max_Reward", max_reward, self.iter)
+                            tf.summary.scalar(f"Min_Reward", min_reward, self.iter)
+                            tf.summary.scalar(f"Average_Length", average_steps, self.iter)
                     self.rewards.append(av_reward)
             
                 
@@ -536,10 +537,13 @@ class GlobalAgent(Agent):
                 average_steps = sum(steps_ep) / len(steps_ep)
                 
                 writer.writerow([f"Average: {av_reward} -- Max: {max_reward} -- Min {min_reward}"])
+            
             self.average_reward_queue.put(sum(self.rewards) / len(self.rewards), block=True, timeout=30)
         except KeyboardInterrupt:
             #---After all steps are run average out the last 100 rewards and put it on a queue
+            print("Wait until summary of partial run is updated to Running_log.csv")
             with open("Running_Log.csv", "a") as file:
+                
                     writer = csv.writer(file, delimiter=",")
                     writer.writerow(["Run", self.iter])
                     
@@ -553,6 +557,8 @@ class GlobalAgent(Agent):
                     average_steps = sum(steps_ep) / len(steps_ep)
                     
                     writer.writerow([f"Average: {av_reward} -- Max: {max_reward} -- Min {min_reward}"])
+            print("Press ctr + C one last time. Summary has be saved!")
+            
             self.average_reward_queue.put(sum(self.rewards) / len(self.rewards), block=True, timeout=30)
         
     
@@ -788,7 +794,7 @@ agent_configuration = {
 
 if __name__ == '__main__':
     
-    number_of_workers = 4
+    number_of_workers = 2
     params_queue = Manager().Queue(number_of_workers)
     episode_queue = Manager().Queue()
     current_iter = Manager().Value("i", 0)

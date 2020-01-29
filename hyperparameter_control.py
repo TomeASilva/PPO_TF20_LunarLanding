@@ -14,7 +14,7 @@ mu_head_config = {
     }
 cov_head_config = {
     "layer_sizes":[50, 40, 2],
-    "activations": ["relu", "relu", "softplus"],
+    "activations": ["relu", "relu", "sigmoid"],
   
     }
 
@@ -40,9 +40,11 @@ def refresh_search():
                     "critic_optimizer",
                     "entropy", 
                     "gamma",
-                    "gradient_clipping",
+                    "gradient_clipping_actor",
+                    "gradient_clipping_critic"
                     "gradient_steps_per_episode",
                     "epsilon",
+                    "n_episodes_worker"
                     "end"]
     
     with open ("./parameter_search/hyperparameter_list.pickle", "wb") as file:
@@ -65,10 +67,13 @@ def refresh_search():
                             tf.keras.optimizers.RMSprop(learning_rate=0.0001)],
         "entropy": [0.005, 0.01, 0.02, 0.07, 0.1, 0.12],
         "gamma":[0.99, 0.90, 0.80, 0.75, 0.70, 0.65, 0.60],
-        "gradient_clipping": [0.07, 0.1, 0.2, 0.3, 0.5, 0.8, 0.9, 1.0],
-        "gradient_steps_per_episode":[2, 3, 4, 5, 6, 7, 8, 20, 30, 50],
-        "epsilon": [0.009,0.05, 0.1, 0.2, 0.3, 0.4, 0.5]
+        "gradient_clipping_actor": [0.07, 0.1, 0.2, 0.3, 0.5, 0.8, 0.9, 1.0],
+        "gradient_clipping_critic": [0.07, 0.1, 0.2, 0.3, 0.5, 0.8, 0.9, 1.0],
+        "gradient_steps_per_episode": [2, 3, 4, 5, 6, 7, 8, 20, 30, 50],
+        "epsilon": [0.009, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5],
+        "n_episodes_worker": [1, 2, 3, 4, 10, 15, 20, 25, 30, 35, 40]
     }
+    
     with open ("./parameter_search/parameter_range.pickle", "wb") as f:
         pickle.dump(agent_configuration, f)
         
@@ -94,9 +99,11 @@ def refresh_search():
                     "critic_optimizer": 0,
                     "entropy": 0, 
                     "gamma": 0,
-                    "gradient_clipping": 0,
+                    "gradient_clipping_actor": 0, 
+                    "gradient_clipping_critic": 0,
                     "gradient_steps_per_episode": 0,
-                    "epsilon": 0}
+                    "epsilon": 0,
+                    "n_episodes_worker": 0}
     
     with open ("./parameter_search/max_reward.pickle", "wb") as f:
         pickle.dump(max_reward_index, f)

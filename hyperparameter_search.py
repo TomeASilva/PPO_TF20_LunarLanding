@@ -6,56 +6,7 @@ import pickle
 import csv
 
 ### this script performs grid search over the hyperparameters defined in hyperparameter_control.py
-     
 
-trunk_config = {
-   
-    "layer_sizes": [100, 100],
-    "activations": [ "relu", "relu"],
-}
-
-
-
-mu_head_config = {
-    "layer_sizes":[50, 40, 2],
-    "activations": ["relu", "relu", "relu", "tanh"]
-    }
-
-cov_head_config = {
-    "layer_sizes":[50, 40, 2],
-    "activations": ["relu", "relu", "softplus"],
-  
-    }
-
-critic_net_config= {
-    "layer_sizes":[100, 64, 1],
-    "activations": ["relu", "relu", "linear"],
-    }
-
-
-hyperparameters = { "trunk_config": trunk_config,
-                    "actor_mu_config": mu_head_config,
-                    "actor_cov_config":cov_head_config, 
-                    "critic_config": critic_net_config,
-                    "actor_optimizer": tf.keras.optimizers.SGD(learning_rate=0.001),
-                    "critic_optimizer": tf.keras.optimizers.SGD(learning_rate=0.01),
-                    "entropy":0.01,
-                    "gamma":0.99,
-                    "gradient_clipping": 0.5,
-                    "gradient_steps_per_episode": 3,
-                    "epsilon": 0.2,
-                    }
-
-agent_configuration = {
-
-    "action_space_bounds":[-1, 1],
-    "action_space_size":2,
-    "number_iter":100,
-    "max_steps":2000,
-    "n_episodes_per_cycle":1,
-    "env_name":"LunarLanderContinuous-v2",
-    "state_space_size":8,
-}
 
 def run_search (agent_configuration, hyperparameters):
     number_of_workers = 4
@@ -120,7 +71,7 @@ if __name__ == "__main__":
     agent_configuration = {
                     "action_space_bounds":[-1, 1],
                     "action_space_size":2,
-                    "number_iter":300,
+                    "number_iter":100,
                     "max_steps":2000,
                     "n_episodes_per_cycle":1,
                     "env_name":"LunarLanderContinuous-v2",
