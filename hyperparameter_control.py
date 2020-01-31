@@ -108,6 +108,10 @@ def refresh_search():
     with open ("./parameter_search/max_reward.pickle", "wb") as f:
         pickle.dump(max_reward_index, f)
     
+    #refresh the the best_reward_found
+    best_reward = -10000
+    with open("./parameter_search/current_best_reward.pickle", "wb") as f :
+        pickle.dump(best_reward, f)
 
 if __name__ == "__main__":
     refresh_search()
