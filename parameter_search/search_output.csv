@@ -1,0 +1,272 @@
+Average_reward:-209.87075563485328
+trunk_config:"{'layer_sizes': [100, 100], 'activations': ['relu', 'relu']}"
+actor_mu_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'relu', 'tanh']}"
+actor_cov_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'sigmoid']}"
+critic_config:"{'layer_sizes': [100, 64, 1], 'activations': ['relu', 'relu', 'linear']}"
+actor_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x00000264D9AD69E8>
+actor_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=1e-04>"
+critic_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x00000264D9AD6D68>
+critic_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+entropy:0.005
+gamma:0.99
+gradient_clipping_actor:0.07
+gradient_clipping_critic:1.0
+gradient_steps_per_episode:2
+epsilon:0.009
+n_episodes_worker:1
+Average_reward:-177.9919536609319
+trunk_config:"{'layer_sizes': [100, 100], 'activations': ['relu', 'relu']}"
+actor_mu_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'relu', 'tanh']}"
+actor_cov_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'sigmoid']}"
+critic_config:"{'layer_sizes': [100, 64, 1], 'activations': ['relu', 'relu', 'linear']}"
+actor_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x00000264D9AD69E8>
+actor_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=1e-04>"
+critic_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x00000264D9AD6D68>
+critic_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+entropy:0.005
+gamma:0.99
+gradient_clipping_actor:0.07
+gradient_clipping_critic:1.0
+gradient_steps_per_episode:3
+epsilon:0.009
+n_episodes_worker:1
+Average_reward:-248.02123213473814
+trunk_config:"{'layer_sizes': [100, 100], 'activations': ['relu', 'relu']}"
+actor_mu_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'relu', 'tanh']}"
+actor_cov_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'sigmoid']}"
+critic_config:"{'layer_sizes': [100, 64, 1], 'activations': ['relu', 'relu', 'linear']}"
+actor_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x00000264D9AD69E8>
+actor_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=1e-04>"
+critic_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x00000264D9AD6D68>
+critic_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+entropy:0.005
+gamma:0.99
+gradient_clipping_actor:0.07
+gradient_clipping_critic:1.0
+gradient_steps_per_episode:4
+epsilon:0.009
+n_episodes_worker:1
+Average_reward:-195.33557727436852
+trunk_config:"{'layer_sizes': [100, 100], 'activations': ['relu', 'relu']}"
+actor_mu_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'relu', 'tanh']}"
+actor_cov_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'sigmoid']}"
+critic_config:"{'layer_sizes': [100, 64, 1], 'activations': ['relu', 'relu', 'linear']}"
+actor_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x00000264D9AD69E8>
+actor_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=1e-04>"
+critic_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x00000264D9AD6D68>
+critic_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+entropy:0.005
+gamma:0.99
+gradient_clipping_actor:0.07
+gradient_clipping_critic:1.0
+gradient_steps_per_episode:5
+epsilon:0.009
+n_episodes_worker:1
+Average_reward:-233.03524722360953
+trunk_config:"{'layer_sizes': [100, 100], 'activations': ['relu', 'relu']}"
+actor_mu_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'relu', 'tanh']}"
+actor_cov_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'sigmoid']}"
+critic_config:"{'layer_sizes': [100, 64, 1], 'activations': ['relu', 'relu', 'linear']}"
+actor_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x00000264D9AD69E8>
+actor_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=1e-04>"
+critic_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x00000264D9AD6D68>
+critic_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+entropy:0.005
+gamma:0.99
+gradient_clipping_actor:0.07
+gradient_clipping_critic:1.0
+gradient_steps_per_episode:6
+epsilon:0.009
+n_episodes_worker:1
+Average_reward:-220.89159812117015
+trunk_config:"{'layer_sizes': [100, 100], 'activations': ['relu', 'relu']}"
+actor_mu_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'relu', 'tanh']}"
+actor_cov_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'sigmoid']}"
+critic_config:"{'layer_sizes': [100, 64, 1], 'activations': ['relu', 'relu', 'linear']}"
+actor_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x00000264D9AD69E8>
+actor_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=1e-04>"
+critic_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x00000264D9AD6D68>
+critic_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+entropy:0.005
+gamma:0.99
+gradient_clipping_actor:0.07
+gradient_clipping_critic:1.0
+gradient_steps_per_episode:7
+epsilon:0.009
+n_episodes_worker:1
+Average_reward:-205.0045068923645
+trunk_config:"{'layer_sizes': [100, 100], 'activations': ['relu', 'relu']}"
+actor_mu_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'relu', 'tanh']}"
+actor_cov_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'sigmoid']}"
+critic_config:"{'layer_sizes': [100, 64, 1], 'activations': ['relu', 'relu', 'linear']}"
+actor_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6A20>
+actor_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+critic_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6F28>
+critic_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+entropy:0.005
+gamma:0.99
+gradient_clipping_actor:0.07
+gradient_clipping_critic:0.07
+gradient_steps_per_episode:50
+epsilon:0.009
+n_episodes_worker:1
+Average_reward:-166.8058295670017
+trunk_config:"{'layer_sizes': [100, 100], 'activations': ['relu', 'relu']}"
+actor_mu_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'relu', 'tanh']}"
+actor_cov_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'sigmoid']}"
+critic_config:"{'layer_sizes': [100, 64, 1], 'activations': ['relu', 'relu', 'linear']}"
+actor_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6A20>
+actor_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+critic_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6F28>
+critic_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+entropy:0.005
+gamma:0.99
+gradient_clipping_actor:0.07
+gradient_clipping_critic:0.07
+gradient_steps_per_episode:2
+epsilon:0.05
+n_episodes_worker:1
+Average_reward:-247.43083582984755
+trunk_config:"{'layer_sizes': [100, 100], 'activations': ['relu', 'relu']}"
+actor_mu_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'relu', 'tanh']}"
+actor_cov_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'sigmoid']}"
+critic_config:"{'layer_sizes': [100, 64, 1], 'activations': ['relu', 'relu', 'linear']}"
+actor_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6A20>
+actor_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+critic_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6F28>
+critic_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+entropy:0.005
+gamma:0.99
+gradient_clipping_actor:0.07
+gradient_clipping_critic:0.07
+gradient_steps_per_episode:2
+epsilon:0.1
+n_episodes_worker:1
+Average_reward:-182.8097066018557
+trunk_config:"{'layer_sizes': [100, 100], 'activations': ['relu', 'relu']}"
+actor_mu_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'relu', 'tanh']}"
+actor_cov_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'sigmoid']}"
+critic_config:"{'layer_sizes': [100, 64, 1], 'activations': ['relu', 'relu', 'linear']}"
+actor_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6A20>
+actor_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+critic_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6F28>
+critic_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+entropy:0.005
+gamma:0.99
+gradient_clipping_actor:0.07
+gradient_clipping_critic:0.07
+gradient_steps_per_episode:2
+epsilon:0.2
+n_episodes_worker:1
+Average_reward:-221.08126723525365
+trunk_config:"{'layer_sizes': [100, 100], 'activations': ['relu', 'relu']}"
+actor_mu_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'relu', 'tanh']}"
+actor_cov_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'sigmoid']}"
+critic_config:"{'layer_sizes': [100, 64, 1], 'activations': ['relu', 'relu', 'linear']}"
+actor_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6A20>
+actor_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+critic_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6F28>
+critic_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+entropy:0.005
+gamma:0.99
+gradient_clipping_actor:0.07
+gradient_clipping_critic:0.07
+gradient_steps_per_episode:2
+epsilon:0.3
+n_episodes_worker:1
+Average_reward:-324.66745535554924
+trunk_config:"{'layer_sizes': [100, 100], 'activations': ['relu', 'relu']}"
+actor_mu_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'relu', 'tanh']}"
+actor_cov_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'sigmoid']}"
+critic_config:"{'layer_sizes': [100, 64, 1], 'activations': ['relu', 'relu', 'linear']}"
+actor_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6A20>
+actor_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+critic_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6F28>
+critic_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+entropy:0.005
+gamma:0.99
+gradient_clipping_actor:0.07
+gradient_clipping_critic:0.07
+gradient_steps_per_episode:2
+epsilon:0.4
+n_episodes_worker:1
+Average_reward:-216.86782187342283
+trunk_config:"{'layer_sizes': [100, 100], 'activations': ['relu', 'relu']}"
+actor_mu_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'relu', 'tanh']}"
+actor_cov_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'sigmoid']}"
+critic_config:"{'layer_sizes': [100, 64, 1], 'activations': ['relu', 'relu', 'linear']}"
+actor_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6A20>
+actor_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+critic_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6F28>
+critic_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+entropy:0.005
+gamma:0.99
+gradient_clipping_actor:0.07
+gradient_clipping_critic:0.07
+gradient_steps_per_episode:2
+epsilon:0.5
+n_episodes_worker:1
+Average_reward:-152.82452570268222
+trunk_config:"{'layer_sizes': [100, 100], 'activations': ['relu', 'relu']}"
+actor_mu_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'relu', 'tanh']}"
+actor_cov_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'sigmoid']}"
+critic_config:"{'layer_sizes': [100, 64, 1], 'activations': ['relu', 'relu', 'linear']}"
+actor_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6A20>
+actor_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+critic_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6F28>
+critic_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+entropy:0.005
+gamma:0.99
+gradient_clipping_actor:0.07
+gradient_clipping_critic:0.07
+gradient_steps_per_episode:2
+epsilon:0.009
+n_episodes_worker:2
+Average_reward:-214.01846279171326
+trunk_config:"{'layer_sizes': [100, 100], 'activations': ['relu', 'relu']}"
+actor_mu_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'relu', 'tanh']}"
+actor_cov_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'sigmoid']}"
+critic_config:"{'layer_sizes': [100, 64, 1], 'activations': ['relu', 'relu', 'linear']}"
+actor_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6A20>
+actor_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+critic_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6F28>
+critic_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+entropy:0.005
+gamma:0.99
+gradient_clipping_actor:0.07
+gradient_clipping_critic:0.07
+gradient_steps_per_episode:2
+epsilon:0.009
+n_episodes_worker:3
+Average_reward:-170.79528188273972
+trunk_config:"{'layer_sizes': [100, 100], 'activations': ['relu', 'relu']}"
+actor_mu_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'relu', 'tanh']}"
+actor_cov_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'sigmoid']}"
+critic_config:"{'layer_sizes': [100, 64, 1], 'activations': ['relu', 'relu', 'linear']}"
+actor_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6A20>
+actor_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+critic_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6F28>
+critic_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+entropy:0.005
+gamma:0.99
+gradient_clipping_actor:0.07
+gradient_clipping_critic:0.07
+gradient_steps_per_episode:2
+epsilon:0.009
+n_episodes_worker:4
+Average_reward:-216.67026557606906
+trunk_config:"{'layer_sizes': [100, 100], 'activations': ['relu', 'relu']}"
+actor_mu_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'relu', 'tanh']}"
+actor_cov_config:"{'layer_sizes': [50, 40, 2], 'activations': ['relu', 'relu', 'sigmoid']}"
+critic_config:"{'layer_sizes': [100, 64, 1], 'activations': ['relu', 'relu', 'linear']}"
+actor_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6A20>
+actor_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+critic_optimizer:<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x000002881D9E6F28>
+critic_learning_rate:"<tf.Variable 'learning_rate:0' shape=() dtype=float32, numpy=0.01>"
+entropy:0.005
+gamma:0.99
+gradient_clipping_actor:0.07
+gradient_clipping_critic:0.07
+gradient_steps_per_episode:2
+epsilon:0.009
+n_episodes_worker:10

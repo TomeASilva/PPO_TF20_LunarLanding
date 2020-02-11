@@ -1,0 +1,40 @@
+2020-02-05 10:31:24,954:Current_hyperparameter: gradient_steps_per_episode
+2020-02-05 10:31:24,954:Current_hyperparameter index: 9
+2020-02-05 10:31:24,955:Parameter index: 10
+2020-02-05 10:31:24,955:If for the current hyperparameter there is only one configuration to search, then there is not need to search within the current hyperparameter
+2020-02-05 10:34:01,118:Check if we are at the end of current hyperparameter range for the current hyperparameter
+2020-02-05 10:34:01,118:Parameter index: 11
+2020-02-05 10:34:01,118:Current_hyperparameter: epsilon
+2020-02-05 10:34:01,118:Current hyperparameter index: 1
+2020-02-05 10:34:47,799:If for the current hyperparameter there is only one configuration to search, then there is not need to search within the current hyperparameter
+2020-02-05 10:36:28,251:Check if we are at the end of current hyperparameter range for the current hyperparameter
+2020-02-05 10:36:28,252:Current hyperparameter_index: 11
+2020-02-05 10:38:51,564:If for the current hyperparameter there is only one configuration to search, then there is not need to search within the current hyperparameter
+2020-02-05 10:40:29,199:Check if we are at the end of current hyperparameter range for the current hyperparameter
+2020-02-05 10:40:29,199:Current hyperparameter_index: 11
+2020-02-05 10:43:49,733:If for the current hyperparameter there is only one configuration to search, then there is not need to search within the current hyperparameter
+2020-02-05 10:45:25,381:Check if we are at the end of current hyperparameter range for the current hyperparameter
+2020-02-05 10:45:25,381:Current hyperparameter_index: 11
+2020-02-05 10:45:28,107:If for the current hyperparameter there is only one configuration to search, then there is not need to search within the current hyperparameter
+2020-02-05 10:47:03,534:Check if we are at the end of current hyperparameter range for the current hyperparameter
+2020-02-05 10:47:03,534:Current hyperparameter_index: 11
+2020-02-05 10:47:05,061:If for the current hyperparameter there is only one configuration to search, then there is not need to search within the current hyperparameter
+2020-02-05 10:48:43,449:Check if we are at the end of current hyperparameter range for the current hyperparameter
+2020-02-05 10:48:43,449:Current hyperparameter_index: 11
+2020-02-05 10:48:46,323:If for the current hyperparameter there is only one configuration to search, then there is not need to search within the current hyperparameter
+2020-02-05 10:50:37,186:Check if we are at the end of current hyperparameter range for the current hyperparameter
+2020-02-05 10:50:37,186:Parameter index: 12
+2020-02-05 10:50:37,186:Current_hyperparameter: n_episodes_worker
+2020-02-05 10:50:37,186:Current hyperparameter index: 1
+2020-02-05 10:50:40,659:If for the current hyperparameter there is only one configuration to search, then there is not need to search within the current hyperparameter
+2020-02-05 10:53:01,866:Check if we are at the end of current hyperparameter range for the current hyperparameter
+2020-02-05 10:53:01,866:Current hyperparameter_index: 12
+2020-02-05 10:53:17,075:If for the current hyperparameter there is only one configuration to search, then there is not need to search within the current hyperparameter
+2020-02-05 10:55:34,385:Check if we are at the end of current hyperparameter range for the current hyperparameter
+2020-02-05 10:55:34,385:Current hyperparameter_index: 12
+2020-02-05 10:55:44,627:If for the current hyperparameter there is only one configuration to search, then there is not need to search within the current hyperparameter
+2020-02-05 10:58:29,257:Check if we are at the end of current hyperparameter range for the current hyperparameter
+2020-02-05 10:58:29,257:Current hyperparameter_index: 12
+2020-02-05 10:58:39,675:If for the current hyperparameter there is only one configuration to search, then there is not need to search within the current hyperparameter
+2020-02-05 11:03:53,053:Check if we are at the end of current hyperparameter range for the current hyperparameter
+2020-02-05 11:03:53,053:Current hyperparameter_index: 12

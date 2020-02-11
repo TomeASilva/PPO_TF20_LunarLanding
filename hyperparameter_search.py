@@ -29,7 +29,7 @@ def see_configuration_details():
         
     with open("./parameter_search/current_hyperparameter_index.pickle", "rb") as file:
         current_hyperparameter_index = pickle.load(file)
-        if current_hyperparameter == "actor_optimizer" or hyperparameter == "critic_optimizer":
+        if current_hyperparameter == "actor_optimizer" or current_hyperparameter == "critic_optimizer":
             print(f"Value for the current hyperparameter: {hyperparameter_range[current_hyperparameter][current_hyperparameter_index]} \n \n")
             print(f"Learning_rate: {hyperparameter_range[current_hyperparameter][current_hyperparameter_index].learning_rate} \n \n")
         else:
@@ -103,6 +103,7 @@ if __name__ == "__main__":
         pass
     elif user_option == "no":
         refresh_search()
+        best_reward = -100000
     else:
         print("Option not accepted the program will terminate")
         exit()
@@ -119,13 +120,16 @@ if __name__ == "__main__":
         max_reward_index = pickle.load(file)
     with open ("./parameter_search/hyperparameter_list.pickle", "rb") as file:
         hyperparameter_list = pickle.load(file)
-        
+    
+    with open('./parameter_search/current_best_reward.pickle', "rb") as file:
+        best_reward = pickle.load(file)
     # the index of the current parameter to changed != current_hyperparameter_index which represents the index
     #with the range of possible values for the current hyperparameter
-    parameter_index = 0
+    parameter_index = hyperparameter_list.index(current_hyperparameter)
     
     
-    best_reward = -100000
+    
+    
     agent_configuration = {
                     "action_space_bounds":[-1, 1],
                     "action_space_size":2,
@@ -170,6 +174,7 @@ if __name__ == "__main__":
                 if key == "actor_optimizer":
                     #segregate the gradient descent algorithm from the learning rate for the actor
                     hyperparameter_store_reward[key] = str(value)
+                    
                     hyperparameter_store_reward["actor_learning_rate"] = str(value.learning_rate)
                 elif key =="critic_optimizer":
                     #segregate the gradient descent algorithm from the learning rate for the actor

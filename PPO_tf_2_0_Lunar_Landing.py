@@ -237,7 +237,8 @@ class Agent(ep_buffer):
 
                 if steps == max_steps and not done:
                     value = self.state_value(observation.reshape(1, -1))
-                    reward += value.numpy()[0]
+               
+                    reward += int(value.numpy()[0])
                 
 
                 self.add_transition((prev_observation, action, observation, reward))
@@ -485,17 +486,19 @@ class GlobalAgent(Agent):
                 #---END Observe the value of given state to see convergence
                 
                 #---START after n iterations RUN EPISODE and PRINT REWARD
-                if self.iter % 100 == 0:
+                if self.iter % 10 == 0:
                     rewards_volatile = []
                     steps_ep = []
                     for i in range (10):
                         reward, steps = self.collect_episodes(1, self.max_steps, render=False)
+                        self.memory = deque() #cleans the memory buffer that holds the information about an episode
                         rewards_volatile.append(reward)
                         steps_ep.append(steps)
                     av_reward = sum(rewards_volatile) / len(rewards_volatile)
                     max_reward = max(rewards_volatile)
                     min_reward = min(rewards_volatile)
                     average_steps = sum(steps_ep) / len(steps_ep)
+                    print(f"Iter: {self.iter}: Average: {av_reward} -- Max: {max_reward} -- Min {min_reward} ")
                     if self.record_statistics:
                         with self.writer.as_default():
                             tf.summary.scalar(f"Averge_Reward", av_reward, self.iter)
@@ -505,8 +508,7 @@ class GlobalAgent(Agent):
                     self.rewards.append(av_reward)
             
                 
-                    print(f"Iter: {self.iter}: Average: {av_reward} -- Max: {max_reward} -- Min {min_reward} ")
-                    
+                  
                 
                 #---END after n iterations of the loop run episode and print reward
                 
@@ -577,7 +579,7 @@ class GlobalAgent(Agent):
             advantage_function = Qsa - self.critic(states)
             advantage_function_mean = tf.math.reduce_mean(advantage_function)
             advantage_function_std = tf.math.reduce_std(advantage_function)
-            advantage_function = tf.math.divide((advantage_function - advantage_function_mean), (advantage_function_std + 1.0e-5))
+            advantage_function = tf.math.divide(advantage_function - advantage_function_mean, (advantage_function_std + 1.0e-8))
             #---END Advantage function computation and normalization
             #---START compute the Normal distributions
             self.probability_density_func = tfp.distributions.Normal(mu, cov)
@@ -596,7 +598,7 @@ class GlobalAgent(Agent):
             self.probability_ratio = tf.math.exp(log_probs - log_probs_old)
             cpi = tf.math.multiply(self.probability_ratio, tf.stop_gradient(advantage_function))
             clip = tf.math.minimum(cpi, tf.multiply(tf.clip_by_value(self.probability_ratio, 1 - self.epsilon, 1 + self.epsilon), tf.stop_gradient(advantage_function)))
-            actor_loss = -tf.reduce_mean(clip) + entropy
+            actor_loss = -tf.reduce_mean(clip) - entropy
             #---END Ensemble Actor loss function
         
         #---START Compute gradients for average
@@ -771,14 +773,14 @@ hyperparameters = { "trunk_config": trunk_config,
                     "actor_cov_config":cov_head_config, 
                     "critic_config": critic_net_config,
                     "actor_optimizer": tf.keras.optimizers.SGD(learning_rate=0.001),
-                    "critic_optimizer": tf.keras.optimizers.SGD(learning_rate=0.01),
-                    "entropy":0.05,
+                    "critic_optimizer": tf.keras.optimizers.SGD(learning_rate=0.001),
+                    "entropy":0.01,
                     "gamma":0.999,
                     "gradient_clipping_actor": 0.08, 
-                    "gradient_clipping_critic": 0.2, 
-                    "gradient_steps_per_episode": 3,
-                    "epsilon": 0.2,
-                    "n_episodes_worker": 3
+                    "gradient_clipping_critic": 0.1, 
+                    "gradient_steps_per_episode": 50,
+                    "epsilon": 0.08,
+                    "n_episodes_worker": 50
                     }
 
 agent_configuration = {
@@ -796,7 +798,7 @@ agent_configuration = {
 
 if __name__ == '__main__':
     
-    number_of_workers = 2
+    number_of_workers = 4
     params_queue = Manager().Queue(number_of_workers)
     episode_queue = Manager().Queue()
     current_iter = Manager().Value("i", 0)

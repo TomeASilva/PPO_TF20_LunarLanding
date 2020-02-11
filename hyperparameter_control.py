@@ -41,10 +41,10 @@ def refresh_search():
                     "entropy", 
                     "gamma",
                     "gradient_clipping_actor",
-                    "gradient_clipping_critic"
+                    "gradient_clipping_critic",
                     "gradient_steps_per_episode",
                     "epsilon",
-                    "n_episodes_worker"
+                    "n_episodes_worker",
                     "end"]
     
     with open ("./parameter_search/hyperparameter_list.pickle", "wb") as file:
@@ -70,7 +70,7 @@ def refresh_search():
         "gradient_clipping_actor": [0.07, 0.1, 0.2, 0.3, 0.5, 0.8, 0.9, 1.0],
         "gradient_clipping_critic": [0.07, 0.1, 0.2, 0.3, 0.5, 0.8, 0.9, 1.0],
         "gradient_steps_per_episode": [2, 3, 4, 5, 6, 7, 8, 20, 30, 50],
-        "epsilon": [0.009, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5],
+        "epsilon": [0.09, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5],
         "n_episodes_worker": [1, 2, 3, 4, 10, 15, 20, 25, 30, 35, 40]
     }
     
@@ -110,7 +110,7 @@ def refresh_search():
     
     #refresh the the best_reward_found
     best_reward = -10000
-    with open("./parameter_search/current_best_reward.pickle", "wb") as f :
+    with open("./parameter_search/current_best_reward.pickle", "wb") as f:
         pickle.dump(best_reward, f)
 
 if __name__ == "__main__":
