@@ -439,19 +439,19 @@ class GlobalAgent(Agent):
                 #---END gradient descent for actor Nets
             
                 #---START gradient descent for critic
-                critic_gradient = self.train_step_critic(states, qsa)
-                    #---START Gradient Clipping critic
-                critic_gradient = [tf.clip_by_value(value, -self.gradient_clipping_critic, self.gradient_clipping_critic) for value in critic_gradient]
-                    #---
-                #---START Record gradient to summaries
-                if self.record_statistics:
-                    with self.writer.as_default():
-                        for gradient, variable in zip(critic_gradient, self.variables["critic"]):
-                            tf.summary.histogram(f"Gradients_{self.name}_critic_{variable.name}", gradient, self.iter)
+                    critic_gradient = self.train_step_critic(states, qsa)
+                        #---START Gradient Clipping critic
+                    critic_gradient = [tf.clip_by_value(value, -self.gradient_clipping_critic, self.gradient_clipping_critic) for value in critic_gradient]
+                        #---
+                    #---START Record gradient to summaries
+                    if self.record_statistics:
+                        with self.writer.as_default():
+                            for gradient, variable in zip(critic_gradient, self.variables["critic"]):
+                                tf.summary.histogram(f"Gradients_{self.name}_critic_{variable.name}", gradient, self.iter)
 
                     #---END Record gradient to summaries
                     #---START Aplly Critic Gradients
-                self.critic_optimizer.apply_gradients(zip(critic_gradient, self.variables["critic"]))
+                    self.critic_optimizer.apply_gradients(zip(critic_gradient, self.variables["critic"]))
                     #---
                 #---END gradient descent for critic
             
