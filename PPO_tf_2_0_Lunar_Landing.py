@@ -773,15 +773,15 @@ hyperparameters = { "trunk_config": trunk_config,
                     "actor_mu_config": mu_head_config,
                     "actor_cov_config":cov_head_config, 
                     "critic_config": critic_net_config,
-                    "actor_optimizer": tf.keras.optimizers.SGD(learning_rate=0.001),
+                    "actor_optimizer": tf.keras.optimizers.SGD(learning_rate=0.0001),
                     "critic_optimizer": tf.keras.optimizers.SGD(learning_rate=0.001),
                     "entropy":0.01,
                     "gamma":0.999,
                     "gradient_clipping_actor": 0.08, 
                     "gradient_clipping_critic": 0.1, 
-                    "gradient_steps_per_episode": 50,
+                    "gradient_steps_per_episode": 40,
                     "epsilon": 0.08,
-                    "n_episodes_worker": 50
+                    "n_episodes_worker": 15
                     }
 
 agent_configuration = {
