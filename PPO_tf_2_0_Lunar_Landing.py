@@ -12,6 +12,7 @@ from collections import deque
 from typing import Tuple, List
 from multiprocessing import Manager, Process, Queue
 import csv
+import multiprocessing
 gpus = tf.config.experimental.list_physical_devices('GPU')
 if gpus:
     try:
@@ -797,7 +798,7 @@ agent_configuration = {
 
 
 if __name__ == '__main__':
-    
+    multiprocessing.set_start_method('spawn')
     number_of_workers = 4
     params_queue = Manager().Queue(number_of_workers)
     episode_queue = Manager().Queue()
